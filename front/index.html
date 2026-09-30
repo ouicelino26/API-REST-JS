@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Gestion de produits</title>
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <section>
+        <h1>Gestion de catégories</h1>
+        <form id="categoryForm">
+            <label for="categoryName">Nom de la catégorie:</label>
+            <input type="text" id="categoryName" name="name" required>
+            <br>
+            <button type="submit">Ajouter la catégorie</button>
+        </form>
+    </section>
+    <section>
+        <h1>Gestion de Produits</h1>
+        <form id="productForm">
+            <label for="productName">Nom du produit:</label>
+            <input type="text" id="productName" name="name" required>
+            <br>
+            <label for="productPrice">Prix du produit:</label>
+            <input type="number" id="productPrice" name="price" min="0" step="0.01" required>
+            <br>
+            <label for="productDescription">Description du produit :</label>
+            <textarea id="productDescription" name="description" required></textarea>
+            <br>
+            <label for="categoryId">Catégorie :</label>
+            <select id="categoryId" name="categoryId" required>
+                <option value="">Choisir une catégorie</option>
+            </select>
+            <br>
+            <button type="submit">Ajouter le produit</button>
+        </form>
+        
+        <h2>Liste des produits</h2>
+        <ul id="productList"></ul>
+
+        <h2>Supprimer un produit</h2>
+        <form id="deleteProductForm">
+            <label for="deleteProductId">Produit :</label>
+            <select id="deleteProductId" required>
+                <option value="">Choisir un produit</option>
+            </select>
+            <button type="submit">Supprimer le produit</button>
+        </form>
+    </section>
+
+    <section>
+        <h2>Supprimer une catégorie</h2>
+        <form id="deleteCategoryForm">
+            <label for="deleteCategoryId">Catégorie :</label>
+            <select id="deleteCategoryId" required>
+                <option value="">Choisir une catégorie</option>
+            </select>
+            <button type="submit">Supprimer la catégorie</button>
+        </form>
+    </section>
+</body>
+</html>
